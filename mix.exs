@@ -1,13 +1,34 @@
 defmodule Jido.Tools.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+
   def project do
     [
       app: :jido_tools,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description: "A collection of tools for the Jido AI agent framework",
+      package: package(),
+      name: "jido_tools",
+      source_url: "https://github.com/agentjido/jido_tools",
+      homepage_url: "https://github.com/agentjido/jido_tools",
+      docs: [
+        main: "readme",
+        extras: ["README.md"]
+      ]
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Mike Hostetler"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/agentjido/jido_tools"
+      }
     ]
   end
 
@@ -26,7 +47,9 @@ defmodule Jido.Tools.MixProject do
       {:jido_ai, github: "agentjido/jido_ai", branch: "main"},
 
       # Action Deps
+      {:req, "~> 0.5.10"},
       {:tentacat, "~> 2.5"},
+      {:weather, "~> 0.4.0"},
 
       # Testing
       {:credo, "~> 1.7", only: [:dev, :test]},
