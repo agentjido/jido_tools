@@ -1,7 +1,7 @@
 defmodule Jido.Tools.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
 
   def project do
     [
@@ -43,8 +43,8 @@ defmodule Jido.Tools.MixProject do
   defp deps do
     [
       # Jido
-      {:jido, github: "agentjido/jido", branch: "main"},
-      {:jido_ai, github: "agentjido/jido_ai", branch: "main"},
+      {:jido, "~> 1.1.0-rc.2"},
+      {:jido_ai, "~> 0.5.0"},
 
       # Action Deps
       {:req, "~> 0.5.10"},

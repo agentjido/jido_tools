@@ -6,18 +6,18 @@ defmodule Jido.Tools.Weather do
     tags: ["weather"],
     vsn: "1.0.0",
     schema: [
-      location: [type: :string, description: "The location to get the weather for"],
-      test: [
-        type: :boolean,
-        description: "Whether to use test data instead of real API",
-        default: false
-      ],
-      units: [type: :string, description: "Units to use (metric/imperial)", default: "metric"],
-      hours: [type: :integer, description: "Number of hours to forecast", default: 24],
+      location: [type: :string, doc: "The location to get the weather for"],
+      units: [type: :string, doc: "Units to use (metric/imperial)", default: "metric"],
+      hours: [type: :integer, doc: "Number of hours to forecast", default: 24],
       format: [
         type: :string,
-        description: "Output format (text/map)",
+        doc: "Output format (text/map)",
         default: "text"
+      ],
+      test: [
+        type: :boolean,
+        doc: "Whether to use test data instead of real API",
+        default: true
       ]
     ]
 
