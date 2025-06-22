@@ -1,6 +1,6 @@
-# Jido.Tools
+# Jido.Tools - DEPRECATED
 
-This package has been deprecated. All tools have been moved to the [Jido.Action](https://github.com/agentjido/jido_action) package.
+This package has been deprecated. All tools have been moved to the [jido_action](https://github.com/agentjido/jido_action) package.
 
 https://github.com/agentjido/jido_action
 
